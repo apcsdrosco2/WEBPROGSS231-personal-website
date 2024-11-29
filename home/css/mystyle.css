@@ -5,7 +5,16 @@ body {
     color: black;
     text-align: center;
   }
+  h3 {
+    color: black;
+    text-align: center;
+  }
   p {
     font-family: verdana;
     font-size: 20px;
+  }
+  img {
+    border-radius: 4px;
+    width: 600px;
+  
   }
