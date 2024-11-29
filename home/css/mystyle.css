@@ -1,17 +1,18 @@
 body {
-    text-align: center;
     background-color:lightblue;
   }
   h1 {
     color: black;
     text-align: center;
   }
-  h3 {
-    color: black;
-  }
   p {
     font-family: verdana;
     font-size: 20px;
+    text-align: left;
+  }
+  h3 {
+    color: black;
+    text-align: left;
   }
   img {
     border-radius: 4px;
