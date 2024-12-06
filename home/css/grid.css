@@ -1,0 +1,26 @@
+.item1 { grid-area: Personal Profile Webpage; }
+.item2 { grid-area: About Me; }
+.item3 { grid-area: Education/Achievements; }
+.item4 { grid-area: Course; }
+.item5 { grid-area: IT Experience; }
+.item6 { grid-area: Hobbies & Interests; }
+.item7 { grid-area: Goals in Life;}
+.item8 { grid-area: Picture Gallery;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage'
+    'About Me Education/Achievements Education/Achievements Education/Achievements Education/Achievements Course'
+    'About Me Hobbies & Interests Hobbies & Interests Goals in Life Picture Gallery Picture Gallery';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
