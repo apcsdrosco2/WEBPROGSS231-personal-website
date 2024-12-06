@@ -1,18 +1,18 @@
-.item1 { grid-area: Personal Profile Webpage; }
-.item2 { grid-area: About Me; }
-.item3 { grid-area: Education/Achievements; }
-.item4 { grid-area: Course; }
-.item5 { grid-area: IT Experience; }
-.item6 { grid-area: Hobbies/Interests; }
-.item7 { grid-area: Goals in Life;}
-.item8 { grid-area: Picture Gallery;}
+.item1 { grid-area: main; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: middul; }
+.item4 { grid-area: middle; }
+.item5 { grid-area: left; }
+.item6 { grid-area: right; }
+.item7 { grid-area: up;}
+.item8 { grid-area: footer;}
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage'
-    'About Me Education/Achievements Education/Achievements Education/Achievements Education/Achievements Course'
-    'About Me Hobbies/Interests Hobbies/Interests Goals in Life Picture Gallery Picture Gallery';
+    'main main main main main main'
+    'menu middul middle left right right'
+    'menu footer footer footer right right' ;
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;
