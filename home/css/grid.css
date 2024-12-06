@@ -3,7 +3,7 @@
 .item3 { grid-area: Education/Achievements; }
 .item4 { grid-area: Course; }
 .item5 { grid-area: IT Experience; }
-.item6 { grid-area: Hobbies & Interests; }
+.item6 { grid-area: Hobbies/Interests; }
 .item7 { grid-area: Goals in Life;}
 .item8 { grid-area: Picture Gallery;}
 
@@ -12,7 +12,7 @@
   grid-template-areas:
     'Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage Personal Profile Webpage'
     'About Me Education/Achievements Education/Achievements Education/Achievements Education/Achievements Course'
-    'About Me Hobbies & Interests Hobbies & Interests Goals in Life Picture Gallery Picture Gallery';
+    'About Me Hobbies/Interests Hobbies/Interests Goals in Life Picture Gallery Picture Gallery';
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;
