@@ -11,8 +11,8 @@
   display: grid;
   grid-template-areas:
     'main main main main main main'
-    'menu middul middle left right right'
-    'menu up footer footer right right' ;
+    'menu middul middle left up up '
+    'menu right right right footer footer' ;
   gap: 10px;
   background-color: #2196F3;
   padding: 10px;
