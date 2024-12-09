@@ -1,6 +1,7 @@
 .container {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   height: 100vh;
 }
 
@@ -12,6 +13,12 @@ header, footer {
 main {
   display: flex;
   flex-direction: column;
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px;
 }
 
 .main-content {
