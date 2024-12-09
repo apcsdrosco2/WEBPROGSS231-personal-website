@@ -26,10 +26,15 @@ main {
   flex: 2;
   background-color: #fff;
   padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 .sidebar {
   flex: 1;
   background-color: #f5f5f5;
   padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
