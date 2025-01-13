@@ -1,0 +1,12 @@
+body {
+    background-color: #121212; /* Dark gray/black color */
+    color: white; /* White text for contrast */
+    font-family: Arial, sans-serif; /* Font for text */
+    margin: 0;
+    padding: 0;
+}
+
+h1, p {
+    text-align: center;
+    margin: 20px;
+}
