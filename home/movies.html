@@ -3,20 +3,27 @@
 <head>
 <link rel="stylesheet" href="css/moviestyle.css">
 <link rel="stylesheet" href="css/musicstyle.css">
-<title>Playlist</title>
+<title>MOVIES/SERIES</title>
 </head>
 <body>
     <h1>MOVIES/SERIES</h1>
     <p>will I watch them again? DEFINITELY.
     </p>
-    <div id="app">
-        <div>
-          <figure v-for="x in movies">
-            <img v-bind:src="x.url">
-            <figcaption>{{ x.name }}</figcaption>
-          </figure>
+    <!DOCTYPE html>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="https://github.com/apcsdrosco2/WEBPROGSS231-personal-website/blob/30ab3d8af62b083acbcb5431bf4690d083b31b68/home/movies/derrygirls.jpg" alt="Derry Girls">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 3">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 4">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 5">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 6">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 7">
         </div>
-      </div>
+    </div>
+</body>
+</html>
+
 
   
   <!-- Mr. Sunshine
@@ -31,7 +38,6 @@
   Anne with an E
   Derry Girls
   Perks of being a Wallflower -->
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="js/movies.js"></script>
+
 </body>
 </html>
