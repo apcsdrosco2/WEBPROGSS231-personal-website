@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/moviestyle.css">
+<title>Playlist</title>
+</head>
+<body>
+    <h1>MOVIES/SERIES</h1>
+    <p>will I watch them again? DEFINITELY.
+    </p>
+    <div id="app">
+        <div>
+          <figure v-for="x in movies">
+            <img v-bind:src="x.url">
+            <figcaption>{{ x.name }}</figcaption>
+          </figure>
+        </div>
+      </div>
+
+  
+  <!-- Mr. Sunshine
+  Game of Thrones
+  House of the Dragon
+  The Handmaid's Tale
+  The Hunger Games Trilogy
+  The Ballad of Songbirds and Snakes
+  Normal People
+  Hilda Hurricane
+  Little Women
+  Anne with an E
+  Derry Girls
+  Perks of being a Wallflower -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="js/movies.js"></script>
+</body>
+</html>
