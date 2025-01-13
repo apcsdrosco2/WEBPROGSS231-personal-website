@@ -7,26 +7,22 @@ body {
 }
 .carousel-container {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: auto; 
     white-space: nowrap;
     padding: 20px 0;
     scrollbar-width: none;
+    display: flex;
 }
 .carousel-container::-webkit-scrollbar {
-    display: none;
-}
-.carousel {
-    display: inline-block;
+    display: none; 
 }
 .carousel img {
-    width: 200px;
-    height: 300px;
     border-radius: 10px;
     margin-right: 10px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    object-fit: cover; 
-    background-color: #333; 
+    object-fit: cover; /* Ensures images fill the box without distortion */
+    background-color: #333; /* Background color for uniformity */
 }
 .carousel img:hover {
     transform: scale(1.1);
