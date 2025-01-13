@@ -4,19 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player</title>
-  <link rel="stylesheet" href="music.css">
 </head>
 <body>
-  <div id="music-player">
     <h1>My Music Player</h1>
-    <audio id="audio" src="unknown.mp3"></audio>
-    <div id="controls">
-      <button id="play-pause">Play</button>
-      <button id="stop">Stop</button>
-      <input id="seek-bar" type="range" value="0">
-      <span id="current-time">0:00</span> / <span id="duration">0:00</span>
-    </div>
-  </div>
-  <script src="script.js"></script>
+    <iframe 
+        style="border-radius:12px" 
+        src="https://open.spotify.com/embed/track/05QGaQnoBuda27vXxpuiRU?utm_source=generator" 
+        width="100%" 
+        height="352" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+    </iframe>
 </body>
 </html>
