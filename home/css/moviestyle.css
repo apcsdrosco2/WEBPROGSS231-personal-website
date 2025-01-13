@@ -21,9 +21,10 @@ body {
     margin-right: 10px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    object-fit: cover; /* Ensures images fill the box without distortion */
-    background-color: #333; /* Background color for uniformity */
+    object-fit: cover;
+    background-color: #333; 
 }
+
 .carousel img:hover {
     transform: scale(1.1);
 }
