@@ -17,14 +17,15 @@ body {
     display: none; 
 }
 .carousel img {
+    width: 200px;
+    height: 300px;
     border-radius: 10px;
     margin-right: 10px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    object-fit: cover;
+    object-fit: cover; 
     background-color: #333; 
 }
-
 .carousel img:hover {
     transform: scale(1.1);
 }
