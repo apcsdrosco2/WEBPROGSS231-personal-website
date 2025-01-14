@@ -11,14 +11,44 @@ h1, p {
     margin: 20px;
 }
 
-#anne {
-    text-align: right;
-  }
+/* for playlist */
+        #anne {
+            text-align: right;
+        }
 
-#hilda {
-    text-align: center;
-  }
+        #hilda {
+            text-align: center;
+        }
 
-#timebomb {
-    text-align: left;
-  }
+        #timebomb {
+            text-align: left;
+        }
+
+/* for musicplayer */     
+        #unknown { 
+            text-align: center;
+            display: flex; align-items: center; gap: 10px;
+        }
+
+        #cherrywine { 
+            text-align: center;
+            display: flex; align-items: center; gap: 10px;
+        }
+
+        #psa { 
+            text-align: center;
+            display: flex; align-items: center; gap: 10px;
+        }
+
+        #silversprings { 
+            text-align: center;
+            display: flex; align-items: center; gap: 10px;
+        }
+
+        #diwn { 
+            text-align: center;
+            display: flex; align-items: center; gap: 10px;
+        }
+
+
+ 
