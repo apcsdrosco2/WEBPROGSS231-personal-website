@@ -12,9 +12,13 @@ h1, p {
 }
 
 #anne {
-    text-align: left;
+    text-align: right;
   }
 
 #hilda {
     text-align: center;
+  }
+
+#timebomb {
+    text-align: left;
   }
