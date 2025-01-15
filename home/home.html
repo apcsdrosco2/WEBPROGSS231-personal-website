@@ -4,67 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Page</title>
-    <link rel="stylesheet" href="css/homestyle.css">
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            text-align: center;
+            display: flex;
         }
 
-        header {
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 60px;
             background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            justify-content: start;
+            transition: width 0.3s;
+            overflow: hidden;
         }
 
-        header h1 {
-            margin: 0;
-            padding-left: 1rem;
+        .sidebar:hover {
+            width: 200px;
         }
 
-        .image-container {
-            display: flex;
-            justify-content: flex-end;
-            flex-wrap: wrap;
-            padding-right: 1rem;
-        }
-
-        .image-container div {
-            margin: 0.5rem;
-            cursor: pointer;
+        .sidebar div {
+            width: 100%;
             text-align: center;
+            margin: 10px 0;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.3s;
         }
 
-        .image-container img {
-            width: 100px;
-            height: 100px;
-            border-radius: 8px;
-            transition: transform 0.3s;
+        .sidebar div:hover {
+            background-color: #575757;
         }
 
-        .image-container img:hover {
-            transform: scale(1.1);
+        .sidebar img {
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
         }
 
-        .image-container span {
-            display: block;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: #333;
+        .sidebar span {
+            display: none;
+            color: #fff;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .sidebar:hover span {
+            display: inline;
+        }
+
+        .content {
+            margin-left: 60px;
+            padding: 2rem;
+            flex-grow: 1;
         }
 
         .hidden-section {
@@ -90,73 +91,72 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="image-container">
-            <div onclick="showSection('about-me')">
-                <img src="buttons/about-me.png" alt="About Me">
-                <span>about me</span>
-            </div>
-            <div onclick="showSection('education')">
-                <img src="buttons/education.png" alt="Education">
-                <span>Education</span>
-            </div>
-            <div onclick="showSection('it-experience')">
-                <img src="buttons/it-experience.png" alt="IT Experience">
-                <span>IT Experience</span>
-            </div>
-            <div onclick="showSection('hobbies')">
-                <img src="buttons/hobbies.png" alt="Hobbies">
-                <span>Hobbies</span>
-            </div>
-            <div onclick="showSection('goals')">
-                <img src="buttons/goals.png" alt="Goals">
-                <span>Goals</span>
-            </div>
-            <div onclick="showSection('favorites')">
-                <img src="buttons/favorites.png" alt="Favorites">
-                <span>Favorites</span>
-            </div>
-            <div onclick="showSection('gallery')">
-                <img src="buttons/gallery.png" alt="Gallery">
-                <span>Gallery</span>
-            </div>
+    <div class="sidebar">
+        <div onclick="showSection('about-me')">
+            <img src="buttons/about-me.png" alt="About Me">
+            <span>About Me</span>
         </div>
-    </header>
+        <div onclick="showSection('education')">
+            <img src="buttons/education.png" alt="Education">
+            <span>Education</span>
+        </div>
+        <div onclick="showSection('it-experience')">
+            <img src="buttons/it-experience.png" alt="IT Experience">
+            <span>IT Experience</span>
+        </div>
+        <div onclick="showSection('hobbies')">
+            <img src="buttons/hobbies.png" alt="Hobbies">
+            <span>Hobbies</span>
+        </div>
+        <div onclick="showSection('goals')">
+            <img src="buttons/goals.png" alt="Goals">
+            <span>Goals</span>
+        </div>
+        <div onclick="showSection('favorites')">
+            <img src="buttons/favorites.png" alt="Favorites">
+            <span>Favorites</span>
+        </div>
+        <div onclick="showSection('gallery')">
+            <img src="buttons/gallery.png" alt="Gallery">
+            <span>Gallery</span>
+        </div>
+    </div>
 
-    <section id="about-me" class="hidden-section">
-        <h2>About Me</h2>
-        <p>Write about yourself here.</p>
-    </section>
+    <div class="content">
+        <section id="about-me" class="hidden-section">
+            <h2>About Me</h2>
+            <p>Write about yourself here.</p>
+        </section>
 
-    <section id="education" class="hidden-section">
-        <h2>Education</h2>
-        <p>Write about your education here.</p>
-    </section>
+        <section id="education" class="hidden-section">
+            <h2>Education</h2>
+            <p>Write about your education here.</p>
+        </section>
 
-    <section id="it-experience" class="hidden-section">
-        <h2>IT Experience</h2>
-        <p>Write about your IT experience here.</p>
-    </section>
+        <section id="it-experience" class="hidden-section">
+            <h2>IT Experience</h2>
+            <p>Write about your IT experience here.</p>
+        </section>
 
-    <section id="hobbies" class="hidden-section">
-        <h2>Hobbies</h2>
-        <p>Write about your hobbies here.</p>
-    </section>
+        <section id="hobbies" class="hidden-section">
+            <h2>Hobbies</h2>
+            <p>Write about your hobbies here.</p>
+        </section>
 
-    <section id="goals" class="hidden-section">
-        <h2>Goals</h2>
-        <p>Write about your goals here.</p>
-    </section>
+        <section id="goals" class="hidden-section">
+            <h2>Goals</h2>
+            <p>Write about your goals here.</p>
+        </section>
 
-    <section id="favorites" class="hidden-section">
-        <h2>Favorites</h2>
-        <p>Write about your favorite things here.</p>
-    </section>
+        <section id="favorites" class="hidden-section">
+            <h2>Favorites</h2>
+            <p>Write about your favorite things here.</p>
+        </section>
 
-    <section id="gallery" class="hidden-section">
-        <h2>Gallery</h2>
-        <p>Write about your gallery or display images here.</p>
-    </section>
-<script src="js/home.js"></script>
+        <section id="gallery" class="hidden-section">
+            <h2>Gallery</h2>
+            <p>Write about your gallery or display images here.</p>
+        </section>
+    </div>
 </body>
 </html>
