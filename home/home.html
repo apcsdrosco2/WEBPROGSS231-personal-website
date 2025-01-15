@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Page</title>
+    <link rel="stylesheet" href="css/homestyle.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            padding-left: 1rem;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            padding-right: 1rem;
+        }
+
+        .image-container div {
+            margin: 0.5rem;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .image-container span {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .hidden-section {
+            display: none;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hidden-section h2 {
+            margin-top: 0;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.hidden-section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Page</h1>
+        <div class="image-container">
+            <div onclick="showSection('about-me')">
+                <img src="buttons/about-me.png" alt="About Me">
+                <span>About Me</span>
+            </div>
+            <div onclick="showSection('education')">
+                <img src="buttons/education.png" alt="Education">
+                <span>Education</span>
+            </div>
+            <div onclick="showSection('it-experience')">
+                <img src="buttons/it-experience.png" alt="IT Experience">
+                <span>IT Experience</span>
+            </div>
+            <div onclick="showSection('hobbies')">
+                <img src="buttons/hobbies.png" alt="Hobbies">
+                <span>Hobbies</span>
+            </div>
+            <div onclick="showSection('goals')">
+                <img src="buttons/goals.png" alt="Goals">
+                <span>Goals</span>
+            </div>
+            <div onclick="showSection('favorites')">
+                <img src="buttons/favorites.png" alt="Favorites">
+                <span>Favorites</span>
+            </div>
+            <div onclick="showSection('gallery')">
+                <img src="buttons/gallery.png" alt="Gallery">
+                <span>Gallery</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="about-me" class="hidden-section">
+        <h2>About Me</h2>
+        <p>Write about yourself here.</p>
+    </section>
+
+    <section id="education" class="hidden-section">
+        <h2>Education</h2>
+        <p>Write about your education here.</p>
+    </section>
+
+    <section id="it-experience" class="hidden-section">
+        <h2>IT Experience</h2>
+        <p>Write about your IT experience here.</p>
+    </section>
+
+    <section id="hobbies" class="hidden-section">
+        <h2>Hobbies</h2>
+        <p>Write about your hobbies here.</p>
+    </section>
+
+    <section id="goals" class="hidden-section">
+        <h2>Goals</h2>
+        <p>Write about your goals here.</p>
+    </section>
+
+    <section id="favorites" class="hidden-section">
+        <h2>Favorites</h2>
+        <p>Write about your favorite things here.</p>
+    </section>
+
+    <section id="gallery" class="hidden-section">
+        <h2>Gallery</h2>
+        <p>Write about your gallery or display images here.</p>
+    </section>
+<script src="js/home.js"></script>
+</body>
+</html>
