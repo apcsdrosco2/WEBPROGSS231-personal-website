@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Style Grid</title>
+    <title>Instagram Style Single Image Viewer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,75 +15,89 @@
             align-items: center;
             min-height: 100vh;
         }
-        
-        .container {
-            max-width: 900px;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
-        }
-        
-        .image-card {
+
+        .viewer {
             position: relative;
-            overflow: hidden;
-            border-radius: 8px;
+            width: 600px;
+            height: 600px;
             background-color: #fff;
+            border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        
-        .image-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .image-card img {
-            width: 100%;
-            height: auto;
+
+        .viewer img {
+            max-width: 100%;
+            max-height: 100%;
             display: block;
         }
-        
-        .caption {
+
+        .button {
             position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
             color: #fff;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-            display: none;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
         }
-        
-        .image-card:hover .caption {
-            display: block;
+
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .viewer:hover .button {
+            opacity: 1;
+        }
+
+        .button.prev {
+            left: 10px;
+        }
+
+        .button.next {
+            right: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Replace "img/example.jpg" with the path to your image -->
-        <div class="image-card">
-            <img src="img/example1.jpg" alt="Post 1">
-            <div class="caption">Caption for Post 1</div>
-        </div>
-
-        <div class="image-card">
-            <img src="img/example2.jpg" alt="Post 2">
-            <div class="caption">Caption for Post 2</div>
-        </div>
-
-        <div class="image-card">
-            <img src="img/example3.jpg" alt="Post 3">
-            <div class="caption">Caption for Post 3</div>
-        </div>
-
-        <div class="image-card">
-            <img src="img/example4.jpg" alt="Post 4">
-            <div class="caption">Caption for Post 4</div>
-        </div>
-
-        <!-- Add more images as needed -->
+    <div class="viewer">
+        <button class="button prev" onclick="prevImage()">Previous</button>
+        <img id="image" src="img/example1.jpg" alt="Post">
+        <button class="button next" onclick="nextImage()">Next</button>
     </div>
+
+    <script>
+        const images = [
+            "img/example1.jpg",
+            "img/example2.jpg",
+            "img/example3.jpg",
+            "img/example4.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const imgElement = document.getElementById('image');
+            imgElement.src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        }
+    </script>
 </body>
 </html>
