@@ -200,13 +200,14 @@
 
         <section id="gallery" class="hidden-section">
             <h2>Gallery</h2>
-            <div id="app">
+            <p><div id="app">
                 <div class="viewer">
                     <button class="button prev" @click="prevImage">Previous</button>
                     <img :src="images[currentIndex]" :alt="`Post ${currentIndex + 1}`">
                     <button class="button next" @click="nextImage">Next</button>
                 </div>
             </div>
+            </p>
         </section>
     </div>
 
