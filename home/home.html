@@ -7,13 +7,10 @@
     <link rel="stylesheet" href="css/musicstyle.css">
     <link rel="stylesheet" href="css/moviestyle.css">
     <link rel="stylesheet" href="css/homestyle.css">
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.hidden-section');
-            sections.forEach(section => section.style.display = 'none');
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="home/home.js"></script>
+    <script src="home/gallery.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -56,7 +53,7 @@
                 <br>
                 ZODIAC SIGN: VIRGO
                 <br>
-                Eversince I got my conciousness, I think I was really introverted, reason why I don't got many friends during my elementary. But it's all good now! I have a friend circle I found when I was grade 8 [and we're still standing strong].
+                Eversince I got my conciousness, I think I was really introverted. <br>
                 One thing about me is that I really, really, REALLY like Hozier. As a musician and as a person. Which is why he's in my Favorite Artist and is my go-to music to play.
                 
             </p>
@@ -203,8 +200,15 @@
 
         <section id="gallery" class="hidden-section">
             <h2>Gallery</h2>
-            <p>Write about your gallery or display images here.</p>
+            <div id="app">
+                <div class="viewer">
+                    <button class="button prev" @click="prevImage">Previous</button>
+                    <img :src="images[currentIndex]" :alt="`Post ${currentIndex + 1}`">
+                    <button class="button next" @click="nextImage">Next</button>
+                </div>
+            </div>
         </section>
     </div>
+
 </body>
 </html>
