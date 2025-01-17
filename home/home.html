@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="css/musicstyle.css">
     <link rel="stylesheet" href="css/moviestyle.css">
     <link rel="stylesheet" href="css/homestyle.css">
-    <script src="home/home.js"></script>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.hidden-section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="sidebar">
