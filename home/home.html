@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="css/musicstyle.css">
     <link rel="stylesheet" href="css/moviestyle.css">
     <link rel="stylesheet" href="css/homestyle.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
     <script src="home/home.js"></script>
-    <script src="home/gallery.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -200,13 +197,8 @@
 
         <section id="gallery" class="hidden-section">
             <h2>Gallery</h2>
-            <p><div id="app">
-                <div class="viewer">
-                    <button class="button prev" @click="prevImage">Previous</button>
-                    <img :src="images[currentIndex]" :alt="`Post ${currentIndex + 1}`">
-                    <button class="button next" @click="nextImage">Next</button>
-                </div>
-            </div>
+            <p> Access this link to see my gallery:
+                <a href="https://apcsdrosco2.github.io/WEBPROGSS231-personal-website/home/gallery.html">Gallery</a>
             </p>
         </section>
     </div>
